@@ -1,0 +1,15 @@
+package korol.ivan.pages;
+
+import korol.ivan.model.GitHubUser;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+    private WebDriver driver;
+    private GitHubUser gitHubUser;
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+        gitHubUser = new GitHubUser();
+    }
+
+}
