@@ -11,5 +11,10 @@ public class MainPage {
 
     public void navigateToURL(String url) {
         drivar.get(url);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
