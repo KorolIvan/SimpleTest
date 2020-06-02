@@ -10,17 +10,8 @@ import java.util.List;
 public class ButtonElement extends ElementController implements Element {
     private WebDriver driver;
 
-    private static ButtonElement buttonElement;
-
-    private ButtonElement(WebDriver driver){
+    public ButtonElement(WebDriver driver){
         this.driver = driver;
-    }
-
-    public static ButtonElement getInstance(WebDriver driver) {
-        if(buttonElement == null) {
-            buttonElement = new ButtonElement(driver);
-        }
-        return buttonElement;
     }
 
     public WebElement getWebElement(String elementName) {

@@ -1,14 +1,9 @@
 package korol.ivan.api.specification;
 
-import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import korol.ivan.api.BaseApiConfig;
-import korol.ivan.model.Repositories;
-import korol.ivan.model.Repository;
 import korol.ivan.util.ApiData;
 import korol.ivan.util.DataSaver;
-
-import java.util.List;
 
 public class RepositorySpecification extends BaseApiConfig {
 

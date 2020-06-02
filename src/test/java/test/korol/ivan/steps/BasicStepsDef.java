@@ -1,7 +1,5 @@
 package test.korol.ivan.steps;
 
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ValidatableResponse;
 import com.jayway.restassured.specification.RequestSpecification;
 import cucumber.api.java.Before;
@@ -65,10 +63,6 @@ public class BasicStepsDef {
         }
     }
 
-    public WebDriver getDriver() {
-        return driver;
-    }
-
     @Given("^I navigate to \"(.+)\"$")
     public void navigateTo(String url) {
         mainPage.navigateToURL(url);
@@ -77,6 +71,11 @@ public class BasicStepsDef {
     @When("^I click on \"(.+)\" link$")
     public void clickOnElement(String elementName) {
         elementsManager.getElement(ElementEnum.LINK).getWebElement(elementName).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @When("^I enter \"(.+)\" to \"(.+)\" field$")
@@ -91,6 +90,11 @@ public class BasicStepsDef {
     @When("^I click on \"(.+)\" button$")
     public void clickOnButtonWithSpecificName(String buttonName) {
         elementsManager.getElement(ElementEnum.BUTTON).getWebElement(buttonName).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("^user successfully logged into the system$")

@@ -5,21 +5,26 @@ import org.openqa.selenium.WebDriver;
 public class ElementsManager {
     private WebDriver driver;
 
-    public ElementsManager() {
-    }
+    private LinkElement linkElement;
+    private ButtonElement buttonElement;
+    private TextFieldElement textFieldElement;
+
 
     public ElementsManager(WebDriver driver) {
         this.driver = driver;
+        linkElement = new LinkElement(driver);
+        textFieldElement = new TextFieldElement(driver);
+        buttonElement = new ButtonElement(driver);
     }
 
     public Element getElement(ElementEnum elementType) {
         switch (elementType) {
             case LINK:
-                return LinkElement.getInstance(driver);
+                return linkElement;
             case BUTTON:
-                return ButtonElement.getInstance(driver);
+                return buttonElement;
             case TEXT_FIELD:
-                return TextFieldElement.getInstance(driver);
+                return textFieldElement;
             default:
                 throw new IllegalArgumentException(
                         String.format("Element type %s is not found", elementType.toString())

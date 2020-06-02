@@ -16,6 +16,6 @@ public class SingleRepoPaage {
     }
 
     public boolean isRepositoryIsNotExist(String repoName) {
-        return driver.getTitle().equalsIgnoreCase("Page not found · GitHub");
+        return driver.getTitle().contains("Page not found");
     }
 }

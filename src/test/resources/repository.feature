@@ -1,5 +1,6 @@
-Feature: As a user I should be able work with repository on gitHub
-#
+Feature: Repository feature
+  As a user I should be able work with repository on gitHub
+
   Scenario: User should be able create repository on gitHub
     Given I navigate to "https://github.com"
     When I click on "Sign in" link

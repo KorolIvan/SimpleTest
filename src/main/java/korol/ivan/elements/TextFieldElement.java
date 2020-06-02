@@ -10,17 +10,8 @@ import java.util.List;
 public class TextFieldElement extends ElementController implements Element {
     private WebDriver driver;
 
-    private static TextFieldElement instance;
-
-    private TextFieldElement(WebDriver driver) {
+    public TextFieldElement(WebDriver driver) {
         this.driver = driver;
-    }
-
-    public static TextFieldElement getInstance(WebDriver driver) {
-        if (instance == null) {
-            instance = new TextFieldElement(driver);
-        }
-        return instance;
     }
 
 

@@ -10,18 +10,18 @@ import java.util.List;
 public class LinkElement extends ElementController implements Element {
     private WebDriver driver;
 
-    private static LinkElement instance;
+//    private static LinkElement instance;
 
-    private LinkElement(WebDriver driver) {
+    public LinkElement(WebDriver driver) {
         this.driver = driver;
     }
 
-    public static LinkElement getInstance(WebDriver driver) {
-        if (instance == null) {
-            instance = new LinkElement(driver);
-        }
-        return instance;
-    }
+//    public static LinkElement getInstance(WebDriver driver) {
+//        if (instance == null) {
+//            instance = new LinkElement(driver);
+//        }
+//        return instance;
+//    }
 
 
     public WebElement getWebElement(String elementName) {
